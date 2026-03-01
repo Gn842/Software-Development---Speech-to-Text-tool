@@ -1,3 +1,55 @@
 body{
-    color: red;
+    font-family: Arial, sans-serif;
+    padding:40px;
+    background:#f4f7fb;
+}
+
+/* Container */
+.container{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+button{
+    font-size:18px;
+    padding:12px 20px;
+    margin:8px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#startBtn{
+    background:#2ecc71;
+    color:white;
+}
+
+#stopBtn{
+    background:#e74c3c;
+    color:white;
+}
+
+#clearBtn{
+    background:#3498db;
+    color:white;
+}
+
+/* Output box */
+#output{
+    margin-top:25px;
+    border:2px solid #ddd;
+    padding:20px;
+    min-height:150px;
+    font-size:22px;
+    line-height:1.5;
+}
+
+/* Accessibility focus */
+button:focus{
+    outline:3px solid black;
 }
