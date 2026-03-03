@@ -53,3 +53,138 @@ button{
 button:focus{
     outline:3px solid black;
 }
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: rgb(134, 152, 187);
+    z-index: 1002; /* Ensure it stays above the side menu */
+    transition: left 0.5s; /* Smooth transition for hamburger position */
+}
+
+.menu-open .hamburger-menu {
+    color: white;
+}
+
+#hamburgerBtn {
+    display: none; /* Hide the button, as the hamburger icon will be used */
+}
+
+#saveBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002; /* Ensure it stays above the side menu */
+    background-color: #6b808d;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    background-color: #6d8b92;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    white-space: normal; /* Allow text to wrap */
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    word-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto; /* Center the container */
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+
+    transition: margin-left 0.5s; /* Smooth transition for content shift */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll when menu is open */
+}
+
+#savedChats div {
+    padding-right: 15px;
+    display: flex;
+    align-items: flex-start; /* Align items to the top of the row */
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+    transition:  0.3s; /* Smooth hover effect */
+}
+
+.deleteBtn { /* Style for delete button */
+    margin-right: 10px; /* Space between delete button and chat link */
+    background: transparent;
+    font-size: 18px;
+    padding: 5px;
+    width: auto; /* Allow button to size based on content */
+    height: auto;
+    box-shadow: none;
+}
+
+#savedChats button {
+    background: transparent !important;
+    box-shadow: none !important;
+    margin: 2px;
+    padding: 5px;
+    width: auto;
+    font-size: 16px;
+    color: white; /* Ensure delete button is visible */
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+#savedChats div:hover {
+    background-color: #222;
+}
+
+/*Adjust links inside saved chats area specifically*/
+#savedChats a {
+    padding: 12px 10px 12px 32px; /*Reduce right padding*/
+    display: inline-block; /*change from block to inline-block*/
+    color: #d5faff !important; /*light grey color*/
+    flex-grow: 1; /*Makes text take up all available space, pushing the delete button to the right*/
+    width: auto; /*Allow width to adjust based on content*/
+}
+
+#savedChats button:hover {
+    transform: scale(1.2); /* Slightly enlarge the delete button on hover */
+}
+#savedChats a:hover {
+    color: #f1f1f1 !important; /*light grey color on hover*/
+}
