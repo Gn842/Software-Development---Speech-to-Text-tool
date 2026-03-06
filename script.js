@@ -59,3 +59,11 @@ stopBtn.onclick = function(){
 clearBtn.onclick = function(){
     output.textContent = "";
 };
+
+const languages = {
+    "English": "en-US",
+    "Spanish": "es-ES",
+    "French": "fr-FR",
+    "Hindi": "hi-IN",
+    "Japanese": "ja-JP"
+};
