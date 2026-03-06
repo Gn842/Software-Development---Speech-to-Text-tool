@@ -17,4 +17,15 @@
 <button id="btn-stop-recording" type="button" disabled>Stop Recording</button>
 <video id="preview" width="320" height="240" autoplay muted></video> 
 
-</html>
+<select id="languageSelect">
+  <option value="en-US">English</option>
+  <option value="es-ES">Spanish</option>
+  <option value="fr-FR">French</option>
+  <option value="hi-IN">Hindi</option>
+</select>
+
+<button id="startBtn">Start</button>
+<button id="stopBtn">Stop</button>
+<button id="clearBtn">Clear</button>
+
+<div id="output"></div>
